@@ -73,3 +73,37 @@ function printFriends(array){
 // remove class
  headerTwo.classList.remove('header-two');
  console.log(headerTwo);
+
+ headerTwo.addEventListener('click', function(){
+   headerTwo.textContent = 'Rome';
+ })
+
+
+ //make another element
+ const headerThree = document.createElement('h2');
+ headerThree.textContent = "Friends";
+
+ container.appendChild(headerThree);
+
+ //iterate through my friends array
+ //reference each friend
+ // create a li
+ // add textContent to that li
+ // append that to a ul(unordered list)
+
+ const list = document.createElement('ul');
+
+ for (let i=0; i< friends.length; i++) {
+   let eachFriend = friends[i];
+   console.log(eachFriend);
+
+   const listItem = document.createElement('li');
+   listItem.textContent = eachFriend;
+   list.appendChild(listItem);
+ }
+
+ console.log(list);
+
+ headerThree.addEventListener('click', function() {
+   container.appendChild(list);
+ });
