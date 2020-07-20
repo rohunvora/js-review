@@ -19,7 +19,6 @@ const tesla = {
   }
 }
 
-
 const tiktokVideo = {
   views: 1000000,
   likes: 250000,
@@ -35,3 +34,25 @@ console.log(isCool);
 console.log(friends);
 console.log(tesla.vehicles.vehicleThree)
 console.log(tesla['vehicles']['vehicleThree']);
+
+function printFriends(array){
+  array.forEach(friend => {
+    console.log(friend);
+  });
+ }
+
+ // standard function
+ function addNumbers(num1, num2) {
+   return num1+ num2;
+ }
+
+ //function expression
+ const multiplyNumbers = function(num1, num2) {
+   return num1 * num2;
+ };
+
+ //arrow function
+
+ const subtractNumbers = (num1, num2) => {
+   return num1 - num2;
+ }
