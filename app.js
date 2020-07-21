@@ -107,3 +107,32 @@ function printFriends(array){
  headerThree.addEventListener('click', function() {
    container.appendChild(list);
  });
+
+
+
+ // Probelm Solving
+
+ function fizzBuzz(array) {
+   let result = [];
+   for (let i=0; i < array.length; i++) {
+     let num = array[i];
+     console.log(num);
+
+     if (num % 3 === 0 && num % 5 === 0); {
+       result.push('FizzBuzz');
+     } else if (num % 3 === 0) {
+       result.push('Fizz');
+     } else if (num % 5 === 0) {
+       result.push('Buzz');
+     } else {
+       result.push(num);
+     }
+   }
+   return result;
+ }
+
+ console.log(fixxBuzz([3, 5, 15, 20, 9, 7]));
+
+
+ //pair programmming
+
