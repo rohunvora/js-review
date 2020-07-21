@@ -79,3 +79,16 @@ const container = document.querySelector('.container');
    container.appendChild(list);
  });
 ```
+
+## For Loops
+```javascript
+function copyMachine(element, num) {
+  let createArray = [];
+  for (i=0; i < num; i++) {
+    createArray.push(element);
+  }
+  return createArray;
+}
+
+console.log(copyMachine('candy', 2));
+
