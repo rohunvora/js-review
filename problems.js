@@ -83,6 +83,18 @@ luckySevens(25);
 //   ```js
 // // Write a function `copyMachine(element, num)` that takes in an element and a number
 // // it should return an array of length `num` that is filled with `element`.
+
+function copyMachine(element, num) {
+  let createArray = [];
+  for (i=0; i < num; i++) {
+    createArray.push(element);
+  }
+  return createArray;
+}
+
+console.log(copyMachine('candy', 2));
+
+
 // //
 // // Examples:
 // //
@@ -95,6 +107,21 @@ luckySevens(25);
 //   ```js
 // // Write a function `everyOtherWord(sentence)` that takes in a sentence and returns
 // // an array containing every other word in that sentence.
+
+function everyOtherWord(element) {
+  let newNewArray = [];
+  let sentenceSplit = element.split(" ");
+  for (i = 0; i < sentenceSplit.length; i++) {
+    if(i % 2 === 0) {
+      newNewArray.push(sentenceSplit[i]);
+    }
+    }
+    return newNewArray
+  }
+
+console.log(everyOtherWord('hello how are you doing on this lovely day'));
+
+
 // //
 // // Examples:
 // //
@@ -108,6 +135,30 @@ luckySevens(25);
 // // point behind it, except words that already have punctuation. Punctuation
 // // marks are ". , ! ? ; :"
 // //
+
+let softSentence = "Stop it now! Please, wont you stop?";
+
+function wordYeller(sentence) {
+  //create a new array
+  let newestArray = [];
+  //split the sentence
+  let splitSentence = sentence.split(" ");
+  let exclamation = "! ";
+   //create a for loop that cycles through the new split up array
+  for (i=0; i < splitSentence.length; i++) {
+    // if statement that checks if the word has punctuation in it
+    if (splitSentence[i].includes(".", ",","!","?",";",":") == true) {
+      newestArray.push(splitSentence[i]);
+    } else {
+      newestArray.push(splitSentence[i].concat(exclamation));
+    }
+  }
+  let yelledWords = newestArray.join("");
+  return yelledWords;
+}
+
+console.log(wordYeller(softSentence));
+
 // // Example 1
 // // let sent = "Stop it now! Please, wont you stop?";
 // // let yelledWords = wordYeller(sent);
@@ -123,6 +174,14 @@ luckySevens(25);
 // // strings and a string as arguments and returns an array where each element is
 // // replaced with true if the string is a substring of the element and false if
 // // it is not.
+
+function arraySubstring(words, str) {
+
+
+}
+
+
+
 // //
 // // Examples:
 // //
