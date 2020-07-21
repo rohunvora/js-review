@@ -141,13 +141,14 @@ let softSentence = "Stop it now! Please, wont you stop?";
 function wordYeller(sentence) {
   //create a new array
   let newestArray = [];
+  let excludedPunctuation = [".", ",", "!", "?", ";", ":"];
   //split the sentence
   let splitSentence = sentence.split(" ");
   let exclamation = "! ";
    //create a for loop that cycles through the new split up array
   for (i=0; i < splitSentence.length; i++) {
     // if statement that checks if the word has punctuation in it
-    if (splitSentence[i].includes(".", ",","!","?",";",":") == true) {
+    if (splitSentence[i].includes(excludedPunctuation)) {
       newestArray.push(splitSentence[i]);
     } else {
       newestArray.push(splitSentence[i].concat(exclamation));
@@ -175,11 +176,25 @@ console.log(wordYeller(softSentence));
 // // replaced with true if the string is a substring of the element and false if
 // // it is not.
 
+ //create an empty truth array
+  // create a for loop to check through each word
+  // use the includes function to check if the string is in the array
+  // if yes, then push true to the empty array
+  // if no, then push false to the empty array
+
 function arraySubstring(words, str) {
-
-
+  let truthArray = [];
+  for (i = 0; i < words.length; i++) {
+    if (words[i].includes(str)) {
+      truthArray.push("True");
+    } else {
+      truthArray.push("False");
+    }
+  }
+  return truthArray;
 }
 
+console.log(arraySubstring(["hello", "history", "helix", "hellos"], "hel"));
 
 
 // //
@@ -195,6 +210,25 @@ function arraySubstring(words, str) {
 // // Write a function evenCaps(sentence) that takes in a sentence as an
 // // argument and returns the same string with each even index being
 // // capitalized. Index 0 counts as even.
+
+function evenCaps(sentence) {
+  //create an empty array
+  let emptyArray = [];
+  let splitUpSentence = sentence.split("");
+  for (i=0; i<splitUpSentence.length; i++) {
+    if(i % 2 === 0) {
+      emptyArray.push(splitUpSentence[i])
+    } else {
+      let toCapital = splitUpSentence[i]
+      emptyArray.push(splitUpSentence[i].toUpperCase());
+    }
+  }
+  let finalCase = emptyArray.join("");
+  return finalCase;
+}
+
+console.log(evenCaps("Tom got a small piece of pie"));
+
 // //
 // // Examples:
 // //
