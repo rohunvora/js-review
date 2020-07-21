@@ -219,7 +219,6 @@ function evenCaps(sentence) {
     if(i % 2 === 0) {
       emptyArray.push(splitUpSentence[i])
     } else {
-      let toCapital = splitUpSentence[i]
       emptyArray.push(splitUpSentence[i].toUpperCase());
     }
   }
